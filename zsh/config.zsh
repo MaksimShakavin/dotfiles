@@ -12,16 +12,10 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
-# don't nice background tasks
-setopt NO_BG_NICE
-setopt NO_HUP
-setopt NO_BEEP
 # allow functions to have local options
 setopt LOCAL_OPTIONS
 # allow functions to have local traps
 setopt LOCAL_TRAPS
-# share history between sessions ???
-setopt SHARE_HISTORY
 # add timestamps to history
 setopt EXTENDED_HISTORY
 setopt PROMPT_SUBST
@@ -47,7 +41,7 @@ zle -N down-line-or-beginning-search
 
 # emacs mode
 # I always enter vi mode by mistake
-bindkey -e
+bindkey -v
 
 # fuzzy find: start to type
 bindkey "$terminfo[kcuu1]" up-line-or-beginning-search
